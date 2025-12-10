@@ -7,7 +7,7 @@ function LeftHalf(){
 
     return(
             <div class="left">
-                <h1>Makhosandile Sifiso Nkosi</h1>
+                <h1>Makhosandile (Sifiso) Nkosi</h1>
                 <p>{qualification}</p>
                 <p class="subtitle"><Typewriter text={description} speed={35} /></p>
             </div>
