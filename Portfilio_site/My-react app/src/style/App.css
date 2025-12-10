@@ -1,0 +1,132 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* disables scrolling */
+}
+
+body {
+  background: #1f3630;
+  color: white;
+  font-family: 'Eczar', serif;
+  font-size: 1vw;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;     /* lock container to viewport height */
+  width: 100%;
+  padding: 5%;       /* reduce padding to prevent overflow */
+  gap: 5%;           /* space between left/right */
+  box-sizing: border-box; /* includes padding in height calculation */
+}
+
+/* LEFT SIDE */
+.left {
+  width: 65%;
+  margin: 0.5em 0 0.5em 9em;
+}
+
+.left h1 {
+  font-size: 4vw;
+  margin: 0;
+}
+
+.left p {
+  font-size: 1.2vw;
+  color: #cce7cf;
+  margin: 1.3em 0;
+}
+
+.subtitle {
+  margin-top: 2%;
+  max-width: 80%;
+  line-height: 1.5;
+  font-size: 1.4vw;
+}
+
+.typewriter {
+  border-right: 2px solid white;
+  padding-right: 5px;
+  animation: blink 0.8s infinite;
+}
+
+.typewriter.done {
+  border-right: none;     /* ← remove cursor when done */
+  animation: none;        /* ← stop blinking */
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+
+/* RIGHT SIDE */
+.right {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 8%;
+}
+
+.right p{
+  font-size: 1.2vw;
+  color: #cce7cf;
+  margin: 0.5em 0;
+}
+
+.right a{
+  text-decoration: none;
+}
+
+.icons{
+  margin-left: 2em;
+}
+
+.icons img{
+  margin-left: 2em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  width: 1.4em;
+  filter: invert(100%) sepia(56%) saturate(127%) hue-rotate(75deg) brightness(116%) contrast(100%);
+}
+/* Nav links */
+.nav a {
+  color: white;
+  font-size: 1.6vw;
+  font-weight: bold;
+  line-height: 1.5em;
+}
+
+.nav a:hover {
+  opacity: 0.8;
+}
+
+/* ===================== MOBILE BREAK ===================== */
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 5%;
+    padding: 5%;  /* reduce padding */
+  }
+
+  .left, .right {
+    width: 100%;
+  }
+
+  .left h1 {
+    font-size: 6vw;  /* scale up for mobile readability */
+  }
+
+  .subtitle {
+    max-width: 90%;
+    font-size: 3vw;
+  }
+
+  .nav a {
+    font-size: 5vw;
+  }
+}
